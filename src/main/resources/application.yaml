@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      database: test
+      port: 27017
+      host: localhost
+      auto-index-creation: true
+      username: root
+      password: example
+      authentication-database: admin
+
+server:
+  port: 9191

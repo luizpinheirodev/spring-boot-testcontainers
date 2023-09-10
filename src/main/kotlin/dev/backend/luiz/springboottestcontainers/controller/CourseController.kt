@@ -13,9 +13,9 @@ import reactor.core.publisher.Mono
 class CourseController(private val courseService: CourseService) {
 
     @PostMapping
-    fun addCourse(@RequestBody course: Course?): Mono<Course> {
+    fun addCourse(@RequestBody course: Course): Mono<Course> {
         LOGGER.info("CourseController::addCourse method executed")
-        return courseService.addNewCourse(course!!)
+        return courseService.addNewCourse(course)
     }
 
     @GetMapping
